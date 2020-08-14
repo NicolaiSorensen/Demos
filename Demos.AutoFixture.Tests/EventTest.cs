@@ -43,14 +43,13 @@ namespace Demos.AutoFixture.Tests
             public void Should_set_priority()
             {
                 var fixture = new Fixture();
-                var priority = 1;
-                fixture.Register<Event>(() => new Event(fixture.Create<string>(), fixture.Create<string>(), priority));
+                fixture.Register<int>(() => 1);
                 
                 var sut = fixture.Create<Event>();
 
                 sut.Priority.Should().Be(1);
 
-                // this works. but why is it not a good idea?
+                // Ok this works! But what about the string parameters?
             }
         }
     }
