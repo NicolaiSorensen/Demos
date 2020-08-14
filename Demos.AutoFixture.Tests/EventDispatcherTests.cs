@@ -15,7 +15,6 @@ namespace Demos.AutoFixture.Tests
             {
                 sut.SendAll(events);
 
-
             }
     }
     }
